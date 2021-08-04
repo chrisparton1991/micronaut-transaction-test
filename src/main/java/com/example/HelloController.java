@@ -17,6 +17,7 @@ public class HelloController {
         this.dataSource = dataSource;
     }
 
+    // @Transactional TODO annotation not on classpath.
     @Get(produces = MediaType.TEXT_PLAIN)
     public String test() throws SQLException {
         ResultSet rs = dataSource.getConnection().createStatement().executeQuery("SELECT 1");
